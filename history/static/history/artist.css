@@ -1,0 +1,35 @@
+
+.artist_list {
+  min-height: 100vh;
+}
+
+.artist_list_item {
+  padding-bottom: 10px;
+}
+
+.record_bullet {
+  height: 40px;
+  margin-left: 20px;
+  height: 40px;
+  margin-left: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.artist_name_list {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.artist_name {
+  color: var(--main-text);
+  font-weight: bold;
+  font-size: 3.25vw;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.artist_name:hover {
+  color: var(--background-gold);
+}

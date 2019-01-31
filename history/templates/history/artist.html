@@ -1,0 +1,23 @@
+{% extends "history/generic.html" %}
+
+{% block content %}
+
+  <div id="main_container">
+    <h1 class="main_title">My Top Rock Bands</h1>
+    {% if all_artists %}
+      <ul class="artist_list">
+        {% for artist in all_artists %}
+        <li class="artist_list_item">
+          <a class="artist_name_list" href="{% url 'history:detail' artist.id %}">
+            <img src="https://cdn.pixabay.com/photo/2015/08/10/21/26/vinyl-883199__340.png" class="record_bullet" alt="Record"></img>
+            <p class="artist_name">{{ artist.ArtistName }}</p>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No artists are available.</p>
+    {% endif %}
+  </div>
+
+{% endblock content %}

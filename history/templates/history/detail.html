@@ -1,0 +1,35 @@
+{% extends "history/generic.html" %}
+
+
+{% block content %}
+
+  <div id="main_container">
+    <h1 class="main_title">{{artist.ArtistName}}</h1>
+    {% if artist.song_set.all %}
+    <div id="song_list">
+        {% for item in artist.song_set.all %}
+        <h1 class="song_name">{{ item.Title }}</h1>
+        <section class="indiv_song">
+          <section class="left">
+            <iframe class="song_video" width="420" height="315" src={{item.Video}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen type="video/mp4" ></iframe>
+          </section>
+          <section class="right">
+            <img class="song_art" src={{item.Art}} alt="Album Art"/>
+            <article class="song_details_article">
+              <h1 class="song_details">Group/Artist: {{artist.ArtistName}}</h1>
+              <h1 class="song_details">Date Founded: {{artist.YearEstablished}}</h1>
+              <h1 class="song_details">Song Title: {{ item.Title }}</h1>
+              <h1 class="song_details">Release Date: {{ item.ReleaseDate }}</h1>
+              <h1 class="song_details">Length: {{ item.SongLength }} seconds</h1>
+              <h1 class="song_details">Genre: {{ item.Genre }}</h1>
+            </article>
+          </section>
+        </section>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>No songs available.</p>
+    {% endif %}
+  </div>
+
+{% endblock content %}

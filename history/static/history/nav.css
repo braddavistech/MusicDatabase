@@ -1,0 +1,31 @@
+.navbar {
+  background-color: rgba(0,0,0,0.8);
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 5vh;
+}
+
+.nav_button {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 3px;
+  border-radius: 9px;
+  color: var(--background-gold);
+  background-color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav_button:hover {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 3px;
+  border-radius: 9px;
+  color: white;
+  background-color: var(--background-gold);
+}

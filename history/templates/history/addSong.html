@@ -1,0 +1,45 @@
+{% extends "history/generic.html" %}
+
+{% block content %}
+
+<div id="main_container">
+    <h1 class="main_title">Add Song to Database</h1>
+    <form class="add_artist" action="{% url 'history:save_song' %}" method="POST">
+      {% csrf_token %}
+    <section class="input_section">
+      <label class="input_label" for="song_artist">Artist: </label>
+      <select class="artist_select" name="song_artist">
+        {% for artist in all_artists %}
+          <option class="artist_option" value="{{ artist.id }}">{{ artist.ArtistName }}</option>
+        {% endfor %}
+      </select>
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_title">Song Title: </label>
+      <input class="input_field" id="song_title" type="text" name="song_title" placeholder="Enter song title here.">
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_length">Song Length: </label>
+      <input class="input_field" id="song_length" type="text" name="song_length" placeholder="Enter length of song in seconds here.">
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_release">Release Year: </label>
+      <input class="input_field" id="song_release" type="text" name="song_release" placeholder="Enter year of song release.">
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_genre">Song Genre: </label>
+      <input class="input_field" id="song_genre" type="text" name="song_genre" placeholder="Enter genre for the song.">
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_art">Song Art Link: </label>
+      <input class="input_field" id="song_art" type="text" name="song_art" placeholder="Enter URL of song or album art.">
+    </section>
+    <section class="input_section">
+      <label class="input_label" for="song_video">Song Video Link: </label>
+      <input class="input_field" id="song_video" type="text" name="song_video" placeholder="Enter URL of song video.">
+    </section>
+    <input class="form_button" type="submit" value="Save Song">
+  </form>
+  </div>
+
+{% endblock content %}

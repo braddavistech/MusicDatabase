@@ -1,0 +1,75 @@
+.main_title {
+  color: var(--main-text);
+  text-align: center;
+  font-size: 5vw;
+  padding-bottom: 3vh;
+}
+
+.main_subtitle {
+  color: var(--main-text);
+  text-align: center;
+  font-size: 4vw;
+}
+
+#song_list {
+  text-align: center;
+  min-height: 90vh;
+}
+
+.indiv_song {
+  display: flex;
+}
+
+.left {
+  width: 45vw;
+  padding-left: 5vw;
+}
+
+.right {
+  width: 45vw;
+  padding-left: 5vw;
+}
+
+.song_art {
+  max-width: 30vw;
+  max-height: 30vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.song_details_article {
+  
+}
+
+.song_name {
+  color: var(--main-text);
+  font-size: 4vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.song_details {
+  color: var(--main-text);
+}
+
+.song_video {
+  max-width: 50vw;
+  max-height: 45vw;
+  border: 5px solid rgb(65, 65, 65);
+  border-radius: 5px;
+}
+
+.back_button {
+  width: 20vw;
+  margin-left: 40vw;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 5vw;
+  display: flex;
+  color: var(--main-text);
+  text-decoration: none;
+  background-color: orange;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 19px;
+}

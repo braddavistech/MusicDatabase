@@ -1,0 +1,21 @@
+{% extends "history/generic.html" %}
+
+{% block content %}
+
+  <div id="main_container">
+    <h1 class="main_title">Add Artist to Database</h1>
+    <form class="add_artist" action="{% url 'history:save_artist' %}" method="POST">
+        {% csrf_token %}
+      <section class="input_section">
+        <label class="input_label" for="artist_name">Artist Name: </label>
+        <input class="input_field" id="artist_name" type="text" name="artist_name" placeholder="Enter artist name here.">
+      </section>
+      <section class="input_section">
+        <label class="input_label" for="artist_date">Year Established: </label>
+        <input class="input_field" id="artist_date" type="text" name="artist_date" placeholder="Enter year artist/group was established here.">
+      </section>
+      <input class="form_button" type="submit" value="Save Artist">
+    </form>
+  </div>
+
+{% endblock content %}
